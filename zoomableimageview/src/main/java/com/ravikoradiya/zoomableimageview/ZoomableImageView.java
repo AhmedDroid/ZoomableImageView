@@ -176,7 +176,7 @@ public class ZoomableImageView extends AppCompatImageView {
 
     ViewGroup getRoot(ViewParent viewParent) {
         ViewGroup viewGroup = (ViewGroup) viewParent;
-        if (viewGroup.getId() == android.R.id.content)
+        if (viewGroup != null && viewGroup.getId() == android.R.id.content)
             return viewGroup;
 
         return getRoot(viewGroup.getParent());
